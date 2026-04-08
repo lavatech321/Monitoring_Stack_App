@@ -1,4 +1,4 @@
-# Monitoring Stack Application Deployment (AWS EC2 + Docker Compose)
+# Full Stack Application with Monitoring & Observability (Prometheus + Jaeger)
 
 This project provisions an **Amazon Linux EC2 instance using Terraform** and automatically deploys a **full monitoring-enabled application stack** using Docker Compose.
 
