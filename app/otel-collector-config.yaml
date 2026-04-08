@@ -1,0 +1,22 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: "0.0.0.0:4319"  # Listen on all interfaces
+      http:
+        endpoint: "0.0.0.0:4320"  # Listen on all interfaces
+
+exporters:
+#  file:
+#    path: "/mnt/otel-traces.json"  # Path to the local file where traces will be exported
+  debug:
+  jaeger:
+    endpoint: "jaeger:14250"  # Correct endpoint for Jaeger service in Docker
+    tls:
+      insecure: true
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      exporters: [jaeger]
