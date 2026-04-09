@@ -73,6 +73,9 @@ Terraform automatically:
 
 ```bash
 git clone https://github.com/lavatech321/Monitoring_Stack_App.git
+
+# Make sure to substitute your access key and secret key inside terraform.tfvars
+
 cd Monitoring_Stack_App
 terraform init
 ```
